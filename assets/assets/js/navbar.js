@@ -1,0 +1,4 @@
+console.clear();const app=(()=>{let body;let menu;let menuItems;const init=()=>{body=document.querySelector('body');menu=document.querySelector('.menu-icon');menuItems=document.querySelectorAll('.nav__list-item');applyListeners();}
+const applyListeners=()=>{menu.addEventListener('click',()=>toggleClass(body,'nav-active'));}
+const toggleClass=(element,stringClass)=>{if(element.classList.contains(stringClass)){element.classList.remove(stringClass);console.log('close');$('.carousel-control-prev').show();$('.carousel-control-next').show();$('.nav__content').hide('fade',500);$('.logoku').show('fade',500);$('.logoku').addClass('d-inline-block');}else{element.classList.add(stringClass);console.log('open');$('.carousel-control-prev').hide();$('.carousel-control-next').hide();$('.logoku').removeClass('d-inline-block');$('.logoku').hide('fade',500);setTimeout(function(){$('.nav__content').show('fade',500);},500);}}
+init();})();
